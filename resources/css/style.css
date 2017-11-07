@@ -1,13 +1,23 @@
 /*Universal Styles*/
 html{
-  font-family: sans-serif;
+  font-family: serif;
   font-size: 16px;
 }
 a{
   text-decoration: none;
 }
 h1{
-
+  font-family: "Lora", serif;
+  font-size: 2.2rem;
+  font-weight: bold;
+}
+h2{
+  font-family: "Lora", serif;
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+p{
+  font-family: "Open Sans", sans-serif;
 }
 
 /*Header*/
@@ -18,13 +28,21 @@ header {
   position: static;
   z-index: 10;
   width: 100%;
-  background-color: lightgrey;
+  background-color: white;
   height: 4rem;
+  font-style: "Lora", serif;
 }
+ header a{
+   color: #C0B283;
+ }
 .logo {
   display: flex;
   align-items: center;
   padding-left: 1.5rem;
+}
+.logo em{
+  color: #373737;
+  font-weight: bold;
 }
 header nav{
   padding-right: 1.5rem;
@@ -35,6 +53,7 @@ header ul{
   padding-left: 1rem;
 
 }
+
 /*Header for small screen*/
 
 header .mobile{
@@ -62,6 +81,7 @@ header .mobile{
 /*Main*/
 .banner{
   margin: 0 auto;
+  background-color: #DCD0C0;
 }
 .banner .container{
   display: flex;
@@ -83,31 +103,50 @@ header .mobile{
   height: auto;
   padding-left: 1.25rem;
   margin-right: 3.75rem;
-  margin-top: 6.75rem;
+  margin-top: 11.5rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
 }
-@media only screen and (max-width: 760px) {
+.learn h2{
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.learn a{
+  background-color: #C0B283;
+  color: white;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+
+}
+.learn a:hover{
+  background-color: #373737;
+}
+@media only screen and (max-width: 750px) {
   .banner .container {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-      padding: 0px 0px;
+    padding: 0px 0px;
   }
-
   .banner .image-container {
     width: 100%;
+    padding: 0px 0px;
 
   }
   .text-container{
         width: 100%;
   }
   .learn {
-    margin: 2rem 1.5rem;
+    margin: 1.5rem 1.5rem;
     padding-left: 0px;
     align-items: center;
+  }
+  .learn a{
+    width: 100%;
+
   }
 
 }
@@ -126,7 +165,7 @@ header .mobile{
 .main-info img{
   width: 100%;
 }
-.main-info h2{
+.main-info h1{
   padding-top: 2rem;
 }
 .main-info p{
@@ -138,9 +177,9 @@ header .mobile{
 }
 .content-right p{
   padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 .information-section .right-section{
-  border-left: 1px solid #DCDCDC;
   padding: 1rem 0rem 2rem 0rem;
   display: flex;
   justify-content: flex-start;
@@ -154,6 +193,9 @@ header .mobile{
   justify-content: space-between;
   align-items: center;
 }
+.right-section .box:hover{
+  background-color: #C0B283;
+}
 .box img.desktop{
   width: 35%;
   padding: 1rem;
@@ -161,10 +203,7 @@ header .mobile{
 .box img.mobile{
   display: none;
 }
-.campus{
-  border-top: 1px solid #DCDCDC;
-  border-bottom: 1px solid #DCDCDC;
-}
+
 @media only screen and (max-width:750px){
   .information-section .main-info{
     display: none;
@@ -188,6 +227,7 @@ header .mobile{
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
+    padding: 0;
   }
   .box img.desktop{
     display: none;
@@ -198,11 +238,12 @@ header .mobile{
     width: 100%;
   }
   .content-right{
-    padding: 0rem;
+    padding: 0;
     width: 100%;
     margin-top: 1rem;
 
   }
+
 }
 
 /*Courses*/
@@ -210,6 +251,7 @@ header .mobile{
   padding-bottom: 2rem;
   justify-content: space-between;
   margin: auto;
+  background-color: #DCD0C0;
 }
 .heading{
   width: 100%;
@@ -228,15 +270,19 @@ header .mobile{
   padding-left: 4.5rem;
   padding-right:4.5rem;
 
+
 }
 .courses-mobile{
   display: none;
 }
 .course{
   width: 32%;
-  height: 19.5rem;
+  height: 21rem;
   margin-bottom: 20px;
-  background-color: lightgrey;
+  background-color: white;
+}
+.course:hover{
+  background-color:#C0B283;
 }
 .course img{
   width: 100%;
@@ -272,7 +318,7 @@ header .mobile{
     padding-right: 1rem;
   }
   .courses-mobile a{
-    background-color: #DCDCDC;
+    background-color: white;
     color: #383838;
     text-decoration: none;
     padding: 16px;
@@ -317,6 +363,9 @@ header .mobile{
 .thesis-info{
     width: 27.5rem;
 }
+.thesis .box:hover{
+  background-color: #C0B283;
+}
 
 
 @media only screen and (max-width: 750px) {
@@ -347,7 +396,14 @@ footer {
 footer p {
   padding-left: 24px;
   padding-right: 24px;
-  color: #383838;
+  color: #C0B283;
+}
+footer a{
+  color: #C0B283;
+  display: inline-block;
+  padding-right: 16px;
+  cursor: auto;
+  text-decoration: none;
 }
 
 footer .container {
@@ -362,14 +418,6 @@ nav {
   flex-grow: 1;
 }
 
-.footer .terms a {
-  display: inline-block;
-  padding-right: 16px;
-  color: #383838;
-  font-size: .75rem;
-  cursor: auto;
-  text-decoration: none;
-}
 
 footer .terms a:hover {
   color: #808080;
@@ -379,7 +427,7 @@ footer .terms a:active {
   color: #808080;
 }
 
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 750px) {
   footer {
     border-top: 0px;
   }
